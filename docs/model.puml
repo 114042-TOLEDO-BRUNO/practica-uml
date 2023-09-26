@@ -1,0 +1,29 @@
+@startuml
+
+class CarType {
+    Long id
+    String type
+    BigDecimal price
+}
+
+class Car {
+    Long id
+    CarType carType
+    String brand
+    String model
+}
+
+class Rent {
+    Long id
+    String customer
+    Car car
+    Integer rentedDays
+    LocalDateTime startRent
+    LocalDateTime endRent
+    BigDecimal totalPrice
+}
+
+Car --* Rent
+CarType --* Car
+
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "car_type" {
+    @ id : number <<generated>>
+    type : varchar
+    price : number
+}
+
+entity "cars" {
+    @ id : number <<generated>>
+    # car_type_id : number
+    brand : varchar
+    model : varchar
+}
+
+entity "rentals" {
+    @ id : number <<generated>>
+    # customer : varchar
+    # car_id : number
+    rented_days : number
+    start_rent : datetime
+    end_rent: datetime
+    total_price: number
+}
+
+car_type ||--|{ cars
+cars ||--|{ rentals
+@enduml

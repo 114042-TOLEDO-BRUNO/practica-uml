@@ -1,0 +1,25 @@
+@startuml
+skinparam componentStyle uml1
+skinparam linetype polyline
+top to bottom direction
+
+database "users"
+
+package "Controllers" {
+[UserController] --(login
+}
+package "Services" {
+[UserService] --(save
+[UserService] --(findByUserNameOrEmail
+[UserService] --(findByUserNameAndPassword
+[UserService] --(findByEmailAndPassword
+login -- [UserService]
+}
+package "Repositories" {
+[UserJPARepository] --("users"
+save -- [UserJPARepository]
+findByUserNameOrEmail -- [UserJPARepository]
+findByUserNameAndPassword -- [UserJPARepository]
+findByEmailAndPassword -- [UserJPARepository]
+}
+@enduml

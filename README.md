@@ -1,1 +1,1 @@
-# practica-uml
+this is a practice using Spring Framework and some design patterns that make up the architecture

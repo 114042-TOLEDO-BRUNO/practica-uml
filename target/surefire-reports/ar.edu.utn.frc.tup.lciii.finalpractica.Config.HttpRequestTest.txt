@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ar.edu.utn.frc.tup.lciii.finalpractica.Config.HttpRequestTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.701 s - in ar.edu.utn.frc.tup.lciii.finalpractica.Config.HttpRequestTest

@@ -1,0 +1,19 @@
+@startuml
+database "turns"
+package "controllers"{
+[TurnController] --(saveTurn
+[TurnController] --(getNextTurnById
+}
+
+package "Services"{
+[TurnService] --(getReferenceById
+[TurnService] --(save
+saveTurn -- [TurnService]
+getNextTurnById -- [TurnService]
+}
+
+package "Repository"{
+[TurnJPARepository] --("turns"
+getReferenceById -- [TurnJPARepository]
+save -- [TurnJPARepository]
+@enduml
